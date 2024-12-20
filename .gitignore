@@ -1,0 +1,9 @@
+env/
+data/raw/database.sqlite
+data/raw/vmCloud_data.csv
+data/raw/Reviews.csv
+data/processed/amazon_reviews_cleaned.csv
+data/processed/vmCloud_data_cleaned.csv
+data/enriched/amazon_reviews_enriched.csv
+data/enriched/vmCloud_enriched.csv
+

@@ -1,0 +1,95 @@
+import os
+import sys
+import pandas as pd
+import numpy as np
+
+# Gestion dynamique des chemins : ROOT_DIR = racine du projet
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(ROOT_DIR)
+
+# Import des chemins définis dans paths.py
+from paths import (
+    RAW_DATA_DIR,
+    PROCESSED_DATA_DIR,
+    CLEANED_DATA_DIR,
+)
+
+# Fichier d'entrée et de sortie pour le nettoyage du vmcloud_data.csv
+input_file = os.path.join(RAW_DATA_DIR, "vmCloud_data.csv")
+output_file = os.path.join(PROCESSED_DATA_DIR, "vmCloud_data_cleaned.csv")
+
+# Débogage pour afficher le chemin d'entrée
+print(f"Chemin d'entrée : {input_file}")
+
+
+def clean_vmcloud_data(input_file, output_file):
+    """Nettoie spécifiquement le fichier vmCloud_data.csv sans toucher à la colonne `execution_time`."""
+
+    # Charger les données
+    try:
+        df = pd.read_csv(input_file)
+    except FileNotFoundError as e:
+        print(f"Erreur : {e}")
+        return
+
+    # Conserver la colonne `execution_time` intacte
+    execution_time = df[
+        "execution_time"
+    ].copy()  # Sauvegarder la colonne execution_time
+
+    # Suppression des doublons
+    df = df.drop_duplicates()
+
+    # Gestion des valeurs manquantes dans les autres colonnes
+    missing_threshold = (
+        0.4  # Supprimer les colonnes avec plus de 40% de valeurs manquantes
+    )
+    df = df.loc[:, df.isnull().mean() < missing_threshold]
+
+    # Supprimer les lignes avec trop de valeurs manquantes
+    row_missing_threshold = 0.5
+    df = df[df.isnull().mean(axis=1) < row_missing_threshold]
+
+    # Imputer les valeurs manquantes pour les colonnes restantes
+    for col in df.select_dtypes(include=["float", "int"]).columns:
+        df[col] = df[col].fillna(df[col].mean())  # Remplacer NaN par la moyenne
+
+    for col in df.select_dtypes(include=["object"]).columns:
+        df[col] = df[col].fillna("Inconnu")  # Remplacer NaN par "Inconnu"
+
+    # Standardiser les noms des colonnes
+    df.columns = [col.strip().lower().replace(" ", "_") for col in df.columns]
+
+    # Conversion de toutes les colonnes qui sont de type timestamp ou date, sauf `execution_time`
+    for col in df.columns:
+        if col != "execution_time":  # Exclure la colonne `execution_time`
+            if df[col].dtype in [
+                "int64",
+                "float64",
+            ]:  # Vérifier si la colonne est numérique
+                # Vérifier si la colonne contient des timestamps Unix (valeurs supérieures à 1 milliard)
+                if df[col].max() > 1000000000:
+                    try:
+                        # Convertir en datetime en utilisant l'unité 's' (secondes)
+                        df[col] = pd.to_datetime(df[col], unit="s", errors="coerce")
+                    except Exception as e:
+                        print(f"Erreur lors de la conversion de {col}: {e}")
+            elif (
+                "date" in col or "time" in col
+            ):  # Essayer de convertir les dates dans les colonnes
+                try:
+                    df[col] = pd.to_datetime(df[col], errors="coerce")
+                except Exception as e:
+                    print(f"Erreur lors de la conversion de {col}: {e}")
+
+    # Récupérer à nouveau la colonne `execution_time` et l'ajouter à df
+    df["execution_time"] = execution_time
+
+    # Sauvegarder le DataFrame nettoyé
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    df.to_csv(output_file, index=False)
+    print(f"Fichier nettoyé enregistré sous : {output_file}")
+
+
+# Exécution du nettoyage pour le fichier vmCloud_data
+clean_vmcloud_data(input_file, output_file)

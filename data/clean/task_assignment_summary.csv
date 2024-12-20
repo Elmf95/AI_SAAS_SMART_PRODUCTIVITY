@@ -1,0 +1,251 @@
+category,skill,task_count
+ai/ml,ADTK,1
+ai/ml,ALS,2
+ai/ml,ARIMA,1
+ai/ml,Alibi Detect,1
+ai/ml,Apache Flink,1
+ai/ml,Apache Spark,1
+ai/ml,Augmentor,1
+ai/ml,BERT,3
+ai/ml,BM25,1
+ai/ml,BioBERT,1
+ai/ml,BorutaPy,1
+ai/ml,CNN,1
+ai/ml,CRNN,1
+ai/ml,Carla,1
+ai/ml,CatBoost,1
+ai/ml,Cleverhans,1
+ai/ml,Collaborative Filtering,1
+ai/ml,DALL-E,1
+ai/ml,DQN,1
+ai/ml,DeOldify,1
+ai/ml,DeepRecSys,1
+ai/ml,DeepSpeech,2
+ai/ml,DenseNet,2
+ai/ml,Dialogflow,1
+ai/ml,Dlib,1
+ai/ml,Doc2Vec,1
+ai/ml,Docker,1
+ai/ml,ESRGAN,1
+ai/ml,EfficientNet,1
+ai/ml,Elasticsearch,1
+ai/ml,FER (Facial Expression Recognition),1
+ai/ml,FaceNet,1
+ai/ml,Facebook Prophet,1
+ai/ml,FastText,1
+ai/ml,Faster R-CNN,1
+ai/ml,FeatureTools,1
+ai/ml,GPT-2,1
+ai/ml,GPT-2 Fine-Tuning,1
+ai/ml,GPT-3,2
+ai/ml,H2O.ai,1
+ai/ml,Hugging Face,1
+ai/ml,Isolation Forest,1
+ai/ml,IsolationForest,1
+ai/ml,K-Means,1
+ai/ml,Keras,2
+ai/ml,Kubeflow,1
+ai/ml,LDA,1
+ai/ml,LIWC,1
+ai/ml,LSTM,3
+ai/ml,Labelbox,1
+ai/ml,Librosa,1
+ai/ml,LightGBM,1
+ai/ml,Linear Regression,1
+ai/ml,Logistic Regression,1
+ai/ml,MLflow,1
+ai/ml,MarianMT,2
+ai/ml,Matrix Factorization,1
+ai/ml,MediaPipe,1
+ai/ml,MobileNet,1
+ai/ml,NLTK,1
+ai/ml,NetworkX,1
+ai/ml,NeuralStyle,1
+ai/ml,OpenCV,2
+ai/ml,OpenKE,1
+ai/ml,OpenPose,1
+ai/ml,Optuna,1
+ai/ml,PCA,1
+ai/ml,Pandas,1
+ai/ml,Polyglot,1
+ai/ml,Praat,2
+ai/ml,Prophet,1
+ai/ml,Proximal Policy Optimization,1
+ai/ml,PyCaret,1
+ai/ml,PyTorch,1
+ai/ml,RAKE,1
+ai/ml,RNN,1
+ai/ml,RandomForest,2
+ai/ml,Rasa,1
+ai/ml,Recurrent Neural Networks (RNN),1
+ai/ml,SORT,1
+ai/ml,SV2TTS,1
+ai/ml,Sentence-BERT,1
+ai/ml,Show and Tell,1
+ai/ml,SpaCy,1
+ai/ml,Stable Baselines,1
+ai/ml,StyleGAN,1
+ai/ml,Supervisely,1
+ai/ml,Tacotron,1
+ai/ml,TensorFlow,1
+ai/ml,TensorFlow Lite,1
+ai/ml,TensorFlow-GAN,1
+ai/ml,Tesseract,1
+ai/ml,TextBlob,2
+ai/ml,Transformer,2
+ai/ml,U-Net,1
+ai/ml,VADER,1
+ai/ml,Wave-U-Net,1
+ai/ml,XGBoost,2
+ai/ml,Xception,1
+ai/ml,YOLO,1
+ai/ml,YOLOv4,1
+ai/ml,YOLOv5,1
+ai/ml,Zero-shot BERT,1
+ai/ml,apache spark,1
+ai/ml,docker,1
+ai/ml,nltk,1
+ai/ml,pytorch,1
+ai/ml,scikit-learn,1
+ai/ml,scikit-multilearn,1
+ai/ml,spaCy,1
+ai/ml,tensorflow,1
+backend,C++,6
+backend,Docker,1
+backend,JWT,1
+backend,Python,1
+backend,SQL,1
+backend,api,6
+backend,asp.net,6
+backend,c,6
+backend,database,6
+backend,django,7
+backend,flask,6
+backend,go,6
+backend,java,6
+backend,jwt,1
+backend,kotlin,6
+backend,laravel,6
+backend,node.js,9
+backend,php,6
+backend,python,6
+backend,redis,2
+backend,ruby,6
+backend,rust,6
+backend,scala,6
+backend,spring boot,8
+backend,sql,1
+cloud,aws,7
+cloud,azure,7
+cloud,firebase,7
+cloud,google cloud,7
+cloud,heroku,7
+data science,Pandas,1
+data science,Python,1
+data science,R,1
+data science,Tableau,1
+data science,TensorFlow,1
+database,elasticsearch,1
+database,mongodb,1
+database,mysql,1
+database,oracle,1
+database,postgresql,1
+database administration,MySQL,6
+database administration,PostgreSQL,7
+database administration,SQL,6
+database administration,cassandra,7
+database administration,data,6
+database administration,mongoDB,7
+database administration,oracle,7
+database administration,redis,6
+database administration,sqlite,6
+database administration,storage,6
+deployment,aws,7
+deployment,azure,6
+deployment,continuous deployment,6
+deployment,continuous integration,6
+deployment,docker,7
+deployment,google cloud,7
+deployment,heroku,6
+deployment,jenkins,1
+deployment,kubernetes,7
+deployment,load balancing,6
+deployment,monitoring,6
+deployment,server configuration,6
+devops,AWS,1
+devops,Ansible,1
+devops,GitLab,1
+devops,Kubernetes,1
+devops,Prometheus,1
+devops,ansible,8
+devops,aws,1
+devops,bash,6
+devops,ci/cd,6
+devops,docker,7
+devops,git,6
+devops,jenkins,7
+devops,kubernetes,8
+devops,monitoring,6
+devops,prometheus,1
+devops,puppet,6
+devops,terraform,7
+documentation,api documentation,6
+documentation,asciidoc,7
+documentation,confluence,7
+documentation,markdown,7
+documentation,readthedocs,7
+documentation,sphinx,6
+documentation,technical writing,7
+documentation,user manuals,6
+frontend,UI,6
+frontend,UX,6
+frontend,angular,7
+frontend,aria,1
+frontend,bootstrap,6
+frontend,css,7
+frontend,ember.js,6
+frontend,foundation,6
+frontend,gsap,1
+frontend,html,7
+frontend,javascript,6
+frontend,jquery,6
+frontend,materialize,6
+frontend,react,7
+frontend,redux,6
+frontend,sass,7
+frontend,typescript,7
+frontend,user-friendly,6
+frontend,vue,7
+frontend,webpack,1
+project management,JIRA,1
+project management,MS Project,1
+project management,RiskMatrix,1
+project management,Slack,1
+project management,Trello,1
+project management,agile,6
+project management,collaboration tools,6
+project management,git,1
+project management,jira,7
+project management,kanban,6
+project management,microsoft project,7
+project management,scrum,7
+project management,trello,7
+project management,version control,6
+testing,JMeter,1
+testing,JUnit,1
+testing,Jenkins,1
+testing,OWASP,1
+testing,Selenium,1
+testing,chai,6
+testing,cypress,7
+testing,jest,7
+testing,junit,7
+testing,mocha,6
+testing,pytest,7
+testing,selenium,7
+testing,testing library,6
+ui/ux design,Adobe XD,1
+ui/ux design,Figma,1
+ui/ux design,Sketch,1
+ui/ux design,UserTesting,1
+ui/ux design,WCAG,1
