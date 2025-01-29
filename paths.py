@@ -8,8 +8,10 @@ sys.path.append(ROOT_DIR)
 # Définir les chemins des différents dossiers et fichiers
 DATA_DIR = os.path.join(ROOT_DIR, "data")  # Répertoire des données
 RAW_DATA_DIR = os.path.join(DATA_DIR, "raw")  # Données brutes
-CLEANED_DATA_DIR = os.path.join(DATA_DIR, "processed")
-PROCESSED_DATA_DIR = os.path.join(DATA_DIR, "clean")
+PROCESSED_DATA_DIR = os.path.join(DATA_DIR, "processed")
+CLEANED_DATA_DIR = os.path.join(DATA_DIR, "clean")
+OUTPUT_DIR = os.path.join(DATA_DIR, "output")
+RECOMMENDATION_RESULTS_DIR = os.path.join(DATA_DIR, "recommendation")
 
 # Configurer le chemin vers le dossier src et ses sous-dossiers
 SRC_DIR = os.path.join(ROOT_DIR, "src")
